@@ -1,0 +1,92 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'Gyparody';
+  src: url('https://fonts.cdnfonts.com/s/22050/gyparody_hv.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@layer base {
+  :root {
+    --background: 240 100% 20%;
+    --foreground: 0 0% 100%;
+
+    --card: 240 100% 25%;
+    --card-foreground: 0 0% 100%;
+
+    --popover: 240 100% 25%;
+    --popover-foreground: 0 0% 100%;
+
+    --primary: 240 100% 28%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 39 100% 50%;
+    --secondary-foreground: 240 100% 15%;
+
+    --muted: 240 50% 50%;
+    --muted-foreground: 0 0% 80%;
+
+    --accent: 240 50% 40%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 240 50% 50%;
+    --input: 240 50% 40%;
+    --ring: 39 100% 50%;
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 240 100% 20%;
+    --sidebar-foreground: 0 0% 100%;
+    --sidebar-primary: 240 100% 35%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 50% 40%;
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 240 50% 50%;
+    --sidebar-ring: 39 100% 50%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-jeopardy-navy text-foreground font-sans;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-jeopardy;
+  }
+}
+
+@layer components {
+  .jeopardy-card {
+    @apply bg-jeopardy-blue text-jeopardy-gold border-2 border-jeopardy-gold 
+    font-jeopardy flex items-center justify-center text-center shadow-lg
+    transition-all hover:scale-105 hover:brightness-110 cursor-pointer;
+  }
+  
+  .jeopardy-card-visited {
+    @apply bg-jeopardy-silver text-gray-600 border-gray-400 
+    hover:scale-100 hover:brightness-100 cursor-not-allowed opacity-70;
+  }
+
+  .jeopardy-btn {
+    @apply bg-jeopardy-gold text-jeopardy-navy font-jeopardy font-bold py-3 px-6
+    rounded shadow-md hover:brightness-110 transition-all focus:outline-none
+    focus:ring-2 focus:ring-jeopardy-gold focus:ring-opacity-50;
+  }
+  
+  .jeopardy-input {
+    @apply bg-white border-2 border-jeopardy-gold rounded px-4 py-2
+    text-black focus:outline-none focus:ring-2 focus:ring-jeopardy-gold;
+  }
+}
